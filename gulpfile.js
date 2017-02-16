@@ -5,12 +5,19 @@ let gulp =          require('gulp'),
     concat =        require('gulp-concat'),
     autoprefixer =  require('gulp-autoprefixer'),
     plumber =       require('gulp-plumber'),
-    notify =        require('gulp-notify');
+    notify =        require('gulp-notify'),
+    minifyCSS =     require('gulp-minify-css'),
+    minify =        require('gulp-minify'),
+    gutil =         require('gulp-util'),
+    babel =         require('gulp-babel');
 
 
-const config = {};
-config.srcCSS = 'dev/scss/**/*.scss';
-config.destCSS = 'assets/css/';
+const config = {
+    srcCSS: 'dev/scss/**/*.scss',
+    destCSS: 'assets/css/',
+    srcJS: 'dev/js/*.js',
+    destJS: 'assets/js/'
+}
 
 
 gulp.task('sass', () => {
@@ -36,6 +43,14 @@ gulp.task('sass', () => {
         .pipe(notify({
             message: 'Sass complete'
         }));
+});
+
+gulp.task('scripts', () => { 
+    gulp.src(config.srcJS)
+    .pipe(babel({
+        presets: ['es2015']
+    }))
+    .pipe(gulp.dest(config.destJS))
 });
 
 // Watch, apply only on Dev Environment
