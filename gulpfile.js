@@ -56,7 +56,7 @@ gulp.task('scripts', () => {
 // Watch, apply only on Dev Environment
 gulp.task('watch', () => {
     gulp.watch(config.srcCSS, ['sass'])
-    // gulp.watch();
+    gulp.watch(config.srcJS, ['scripts']);
 });
 
 // PLEASE USE IT ON YOUR LOCAL ENV.
