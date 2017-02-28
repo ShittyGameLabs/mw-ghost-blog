@@ -27,6 +27,10 @@
 
 @import '_partials/normalize';
 
+body {
+    font-family: $main-font;
+}
+
 ul, ol {
     margin:0;
     padding:0;
