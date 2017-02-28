@@ -1,17 +1,18 @@
-<div class="nav">
-    <h3 class="nav-title">Menu</h3>
-    <a href="#" class="nav-close">
+<nav class="nav">
+    <h3 class="nav-title">hack-with.me</h3>
+    <p class="nav-tagline">code things</p>
+    {{!--<a href="#" class="nav-close">
         <span class="hidden">Close</span>
-    </a>
+    </a>--}}
     <ul>
         {{#foreach navigation}}
             <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
         {{/foreach}}
     </ul>
-    {{#if @labs.subscribers}}
+    {{!--{{#if @labs.subscribers}}
         <a class="subscribe-button" href="{{@blog.url}}/subscribe/">Subscribe</a>
     {{else}}
         <a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a>
-    {{/if}}
-</div>
+    {{/if}}--}}
+</nav>
 <span class="nav-cover"></span>

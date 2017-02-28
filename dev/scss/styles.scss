@@ -1,0 +1,40 @@
+
+/**
+* Main Style-Sheet. Please put here only globally applied styles.
+*
+* | The Content
+* |-----------------------------
+* | 1.  Settings -> Variables, Mixins, Predefined Classes
+* | 2.  HTML Overwrites + Normalize
+* | 3.  Navigation
+* | 4.  Common elements(buttons, spans, ect)
+* | 5.  Navigation
+* | 6.  Blocks
+* |     8.1 Header/Hero Block
+* |     8.2 Blog Post Block
+* |     8.3 ---can add moar here
+* | 7. Forms
+* | 8. Footer
+* |     12.1 Return to top link
+* | 9. Media Queries
+*/
+
+/* 1. SETTINGS TO IMPORT BEELOWWWW */
+
+@import '_partials/settings';
+
+/* 2. NORMALIZE */
+
+@import '_partials/normalize';
+
+ul, ol {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+
+
+/* 3. NAVIGATION */
+
+@import '_partials/navigation';
