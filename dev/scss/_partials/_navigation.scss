@@ -1,9 +1,9 @@
 .nav {
-    background:$bg-grey-darker;
-    color:white;
+    background:white;
+    color:$bg-grey-regular;
     height:100%;
     position:fixed;
-    width:220px;
+    width:300px;
     padding:0;
     margin:0;
 
@@ -18,7 +18,7 @@
 
     h3, .nav-tagline {
         text-align: center;
-        
+
     }
 
     .nav-tagline{
@@ -27,9 +27,9 @@
     }
 
     li {
-        border-top:1px solid $bg-grey-dark;
+        border-top:1px solid $bg-grey-light;
         &:last-child {
-            border-bottom:1px solid $bg-grey-dark;
+            border-bottom:1px solid $bg-grey-light;
         }
     }
 
@@ -37,11 +37,12 @@
         width:100%;
         display:block;
         padding:15px;
-        color:rgba(white , $opacity-inactive);
+        color:rgba($bg-grey-regular , $opacity-inactive);
         transition:0.25s ease all;
+        text-decoration: none;
         &:hover {
             color:rgba(white, $opacity-active);
-            background:$bg-grey-darkest;
-        }        
+            background:$cyan;
+        }
     }
 }

@@ -3,3 +3,4 @@ node_modules
 .debug-log
 assets/css
 assets/js
+.DS_Store
