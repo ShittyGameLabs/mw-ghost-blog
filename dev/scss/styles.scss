@@ -30,6 +30,11 @@
 body {
     font-family: $main-font;
     background: $bg-grey-lightest;
+    position: relative;
+}
+
+h1 {
+    margin: 0;
 }
 
 ul, ol {
@@ -38,6 +43,18 @@ ul, ol {
     list-style:none;
 }
 
+.content {
+    width: calc(100vw - 300px);
+    position: absolute;
+    right: 0;
+    padding: 3%;
+}
+
+.content-inner {
+    background: white;
+    padding: 3%;
+    box-shadow: 0 0 25px -5px rgba(0,0,0,.15);
+}
 
 
 /* 3. NAVIGATION */
