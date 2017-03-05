@@ -13,6 +13,7 @@ let gulp =          require('gulp'),
 
 
 const config = {
+    production: !!gutil.env.production,
     srcCSS: 'dev/scss/**/*.scss',
     destCSS: 'assets/css/',
     srcJS: 'dev/js/*.js',
@@ -39,6 +40,7 @@ gulp.task('sass', () => {
                 "iOS >= 6"
             ]
         }))
+        .pipe(config.production ? minifyCSS() : gutil.noop())
         .pipe(gulp.dest(config.destCSS))
         .pipe(notify({
             message: 'Sass complete'
@@ -47,10 +49,22 @@ gulp.task('sass', () => {
 
 gulp.task('scripts', () => { 
     gulp.src(config.srcJS)
+    .pipe(plumber({
+        errorHandler: notify.onError("Error: \n <%= error.message %>")
+    }))
     .pipe(babel({
         presets: ['es2015']
     }))
+    .pipe(config.production ? minify({
+        ext:{
+            src:'.js',
+            min:'.js'
+        }
+    }) : gutil.noop())
     .pipe(gulp.dest(config.destJS))
+    .pipe(notify({
+    message: 'Scripts complete'
+    }));
 });
 
 // Watch, apply only on Dev Environment
@@ -59,11 +73,10 @@ gulp.task('watch', () => {
     gulp.watch(config.srcJS, ['scripts']);
 });
 
-// PLEASE USE IT ON YOUR LOCAL ENV.
-gulp.task('default', ['sass', 'watch']);
+//use --production for production.
+gulp.task('default', config.production ? ['sass', 'scripts'] : ['sass', 'scripts', 'watch']);
 
 
-//production
-gulp.task('production', ['sass']);
+//to do: add src maps
 
 
