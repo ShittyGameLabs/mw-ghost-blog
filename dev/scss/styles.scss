@@ -43,6 +43,14 @@ ul, ol {
     list-style:none;
 }
 
+
+/* 3. NAVIGATION */
+
+@import '_partials/navigation';
+
+/* 4. COMMON ELEMENTS */
+
+//===posts and main content===//
 .content {
     width: calc(100vw - 300px);
     position: absolute;
@@ -50,14 +58,28 @@ ul, ol {
     padding: 3%;
 }
 
+.content-inner {
+    display:flex;
+    flex-wrap:wrap;
+}
+
 .post {
     background: white;
     padding: 20px 15px;
-    margin:25px 0;
+    margin:25px 15px;
     box-shadow: 0 0 25px -5px rgba(0,0,0,.15);
+    flex: 1 1 auto;
 }
 
+.post-title { 
+    a {
+        color:$blue; 
+      }
+}
 
-/* 3. NAVIGATION */
-
-@import '_partials/navigation';
+.post-meta {
+    a {
+    color:black;
+    text-decoration: none;
+    }
+}
