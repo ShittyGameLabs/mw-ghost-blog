@@ -75,6 +75,7 @@ header.main-header {
     width: calc(100vw - 300px);
     position: absolute;
     right: 0;
+    top: 0;
     padding: 3%;
 }
 
@@ -91,6 +92,7 @@ header.main-header {
     box-shadow: 0 0 25px -5px rgba(0,0,0,.15);
     flex: 1 1 auto;
     line-height: 1.5;
+    width: 100%;
 }
 
 .post-title { 
@@ -105,10 +107,15 @@ header.main-header {
     display:flex;
 
     time {
-        margin-left:20px;
+        margin-left:auto;
+        color: $bg-grey-light;
     }
 }
 
 .read-more {
     text-align: right;
+}
+
+.back-home {
+    margin-bottom: 30px;
 }
