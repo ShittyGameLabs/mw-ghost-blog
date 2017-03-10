@@ -31,9 +31,10 @@ body {
     font-family: $body-font;
     background: $bg-grey-lightest;
     position: relative;
+    color: $bg-grey-regular;
 }
 
-h1 {
+h1, h2 {
     margin: 0;
 }
 
@@ -41,6 +42,15 @@ ul, ol {
     margin:0;
     padding:0;
     list-style:none;
+}
+
+a {
+    color: $blue;
+    text-decoration: none;
+    transition: $transition;
+    &:hover {
+        color:$bg-grey-light;
+    } 
 }
 
 
@@ -51,6 +61,16 @@ ul, ol {
 /* 4. COMMON ELEMENTS */
 
 //===posts and main content===//
+
+header.main-header {
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+}
+
+.post-header {
+    margin-bottom: 20px;
+}
+
 .content {
     width: calc(100vw - 300px);
     position: absolute;
@@ -65,22 +85,19 @@ ul, ol {
 
 .post {
     background: white;
-    padding: 20px 15px;
+    padding: 30px;
     margin-right:10px;
     margin-bottom:10px;
     box-shadow: 0 0 25px -5px rgba(0,0,0,.15);
     flex: 1 1 auto;
+    line-height: 1.5;
 }
 
 .post-title { 
     a {
-        font-size:2.4rem;
+        font-size:1.5rem;
         letter-spacing: 1px;
         text-decoration: none;
-        color:black;
-        &:hover {
-            color:$blue;
-        } 
       }
 }
 
@@ -90,9 +107,8 @@ ul, ol {
     time {
         margin-left:20px;
     }
+}
 
-    a {
-    color:black;
-    text-decoration: none;
-    }
+.read-more {
+    text-align: right;
 }

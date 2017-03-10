@@ -14,7 +14,7 @@
         text-transform: uppercase;
         font-family: $accent-font;
         font-size:2.2rem;
-        font-weight: light;
+        font-weight: lighter;
         color: $cyan;
     }
 
@@ -30,9 +30,9 @@
     }
 
     li {
-        border-top:1px solid $bg-grey-light;
+        border-top:1px solid $bg-grey-lighter;
         &:last-child {
-            border-bottom:1px solid $bg-grey-light;
+            border-bottom:1px solid $bg-grey-lighter;
         }
     }
 
