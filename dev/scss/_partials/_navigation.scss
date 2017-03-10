@@ -48,4 +48,15 @@
             background:$cyan;
         }
     }
+
+    .tags{
+        margin-top:25px;
+        display:flex;
+
+        li {
+            background:$bg-grey-light;
+            margin:2px;
+            padding:2px;
+        }
+    }
 }

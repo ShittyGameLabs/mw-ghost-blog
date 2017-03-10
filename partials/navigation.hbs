@@ -9,6 +9,13 @@
             <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
         {{/foreach}}
     </ul>
+    <ul class="tags">
+    {{#get "tags" limit="all"}}
+        {{#foreach tags}}
+            <li>{{name}}</li>
+        {{/foreach}}
+    {{/get}}
+    </ul>
     {{!--{{#if @labs.subscribers}}
         <a class="subscribe-button" href="{{@blog.url}}/subscribe/">Subscribe</a>
     {{else}}
