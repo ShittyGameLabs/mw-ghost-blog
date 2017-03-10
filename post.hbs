@@ -24,7 +24,11 @@
         <header class="post-header">
             <h1 class="post-title">{{title}}</h1>
             <section class="post-meta">
-                <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
+                {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="{{author.name}}" nopin="nopin" />{{/if}}
+                {{author}}
+                {{tags prefix=" &nbsp; on &nbsp; "}}
+        
+                <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
             </section>
         </header>
 
@@ -32,10 +36,10 @@
             {{content}}
         </section>
 
-        <footer class="post-footer">
+        {{!--<footer class="post-footer">--}}
 
         {{!-- Everything inside the #author tags pulls data from the author --}}
-        {{#author}}
+        {{!--{{#author}}
 
             {{#if image}}
             <figure class="author-image">
@@ -73,19 +77,19 @@
                    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                     <span class="hidden">Google+</span>
                 </a>
-            </section>
+            </section>--}}
 
             {{!-- Email subscribe form at the bottom of the page --}}
-            {{#if @labs.subscribers}}
+            {{!--{{#if @labs.subscribers}}
             <section class="gh-subscribe">
                 <h3 class="gh-subscribe-title">Subscribe to {{@blog.title}}</h3>
                 <p>Get the latest posts delivered right to your inbox.</p>
                 {{subscribe_form placeholder="Your email address"}}
                 <span class="gh-subscribe-rss">or subscribe <a href="http://cloud.feedly.com/#subscription/feed/{{@blog.url}}/rss/">via RSS</a> with Feedly!</span>
             </section>
-            {{/if}}
+            {{/if}}--}}
 
-        </footer>
+        {{!--</footer>--}}
 
     </article>
 </main>
