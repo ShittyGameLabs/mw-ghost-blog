@@ -1,6 +1,6 @@
 .nav {
-    background:white;
-    color:$bg-grey-regular;
+    background:$bg-grey-dark;
+    color:rgba(white, $opacity-inactive);
     height:100%;
     position:fixed;
     width:300px;
@@ -15,7 +15,6 @@
         font-family: $accent-font;
         font-size:2.2rem;
         font-weight: lighter;
-        color: $bg-grey-dark;
     }
 
     h1, .nav-tagline {
@@ -30,9 +29,9 @@
     }
 
     li {
-        border-top:1px solid $bg-grey-lighter;
+        border-top:1px solid $bg-grey-regular;
         &:last-child {
-            border-bottom:1px solid $bg-grey-lighter;
+            border-bottom:1px solid $bg-grey-regular;
         }
     }
 
@@ -40,12 +39,12 @@
         width:100%;
         display:block;
         padding:15px 35px;
-        color:rgba($bg-grey-regular , $opacity-inactive);
+        color:rgba(white, $opacity-inactive);
         transition:0.25s ease all;
         text-decoration: none;
         &:hover {
-            color:rgba(white, $opacity-active);
-            background:$cyan;
+            color:darken($blue, 5);
+            background:rgba($bg-grey-regular , $opacity-inactive);
         }
     }
 

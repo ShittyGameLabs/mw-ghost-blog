@@ -29,9 +29,9 @@
 
 body {
     font-family: $body-font;
-    background: $bg-grey-lightest;
+    background: $bg-grey-lighter;
     position: relative;
-    color: $bg-grey-regular;
+    color: darken($bg-grey-dark, 15);
 }
 
 h1, h2 {
