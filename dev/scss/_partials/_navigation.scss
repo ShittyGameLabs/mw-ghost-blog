@@ -15,6 +15,7 @@
         font-family: $accent-font;
         font-size:2.2rem;
         font-weight: lighter;
+        color: $yellow;
     }
 
     h1, .nav-tagline {
@@ -39,11 +40,11 @@
         width:100%;
         display:block;
         padding:15px 35px;
-        color:rgba(white, $opacity-inactive);
+        color:$yellow;
         transition:0.25s ease all;
         text-decoration: none;
         &:hover {
-            color:darken($blue, 5);
+            color:$bg-grey-lighter;
             background:rgba($bg-grey-regular , $opacity-inactive);
         }
     }

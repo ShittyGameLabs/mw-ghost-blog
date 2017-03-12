@@ -29,9 +29,9 @@
 
 body {
     font-family: $body-font;
-    background: $bg-grey-lighter;
+    background: $bg-grey-lightest;
     position: relative;
-    color: darken($bg-grey-dark, 15);
+    color: $bg-grey-dark;
 }
 
 h1, h2 {
@@ -45,7 +45,7 @@ ul, ol {
 }
 
 a {
-    color: $blue;
+    color: $yellow;
     text-decoration: none;
     transition: $transition;
     &:hover {
@@ -98,13 +98,16 @@ header.main-header {
 .post-title { 
     a {
         font-size:1.5rem;
-        letter-spacing: 1px;
         text-decoration: none;
+        text-transform: uppercase;
       }
 }
 
 .post-meta {
     display:flex;
+    a {
+        color: $bg-grey-light;
+    }
 
     time {
         margin-left:auto;
