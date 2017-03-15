@@ -63,8 +63,12 @@ a {
 //===posts and main content===//
 
 header.main-header {
-    margin-bottom: 30px;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    width:100%;
+    text-align: center;
+    position: relative;
+    padding:25px;
+    z-index: -1;
 }
 
 .post-header {
@@ -72,34 +76,44 @@ header.main-header {
 }
 
 .content {
+    background-image: url(../bg.png);
+    background-color: rgba(0,0,0,.01);
+    background-repeat: repeat-x; 
+    background-size: cover;
     width: calc(100vw - 300px);
     position: absolute;
+    z-index: -2;
     right: 0;
     top: 0;
-    padding: 3%;
 }
 
 .content-inner {
     display:flex;
     flex-wrap:wrap;
+    padding: 3% 5%;
 }
 
 .post {
     background: white;
     padding: 30px;
-    margin-right:10px;
-    margin-bottom:10px;
+    margin-right:20px;
+    margin-bottom:20px;
     box-shadow: 0 0 25px -5px rgba(0,0,0,.15);
     flex: 1 1 auto;
     line-height: 1.5;
     width: 100%;
+    
 }
 
 .post-title { 
     a {
+        color:rgba(black,$opacity-inactive);
         font-size:1.5rem;
         text-decoration: none;
         text-transform: uppercase;
+        &:hover {
+            color:rgba(black,$opacity-active);
+        }
       }
 }
 
