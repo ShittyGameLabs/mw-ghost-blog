@@ -5,25 +5,28 @@
 
 {{!-- This is the post loop - each post will be output using this markup --}}
 {{#foreach posts}}
+<a href="{{url}}" class="post-block">
 <article class="{{post_class}}">
     <header class="post-header">
-        <h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
     </header>
-    <section class="post-meta">
-        {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="{{author.name}}" nopin="nopin" />{{/if}}
-        {{author}}
+    {{!-- <section class="post-meta"> --}}
+        {{!-- {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="{{author.name}}" nopin="nopin" />{{/if}}
+        {{author}} --}}
         
-        {{tags prefix=" &nbsp; on &nbsp; "}}
-        <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
-    </section>
+        {{!-- {{tags prefix=" &nbsp; on &nbsp; "}} --}}
+        {{!-- <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time> --}}
+    {{!-- </section> --}}
     <section class="post-excerpt">
-        <p>{{excerpt words="50"}}</p>
-    </section>
-    <div class="read-more">
-        <a class="read-more" href="{{url}}">Read More &raquo;</a>
-    </div>
-            
+        <div class="post-excerpt-content">
+            <h3 class="post-title">{{title}}</h3>
+            <p>{{excerpt words="10"}}...</p>
+        </div>
+        <div class="read-more">
+            <p>Read More &raquo;</p>
+        </div>
+    </section>        
 </article>
+</a>
 {{/foreach}}
 
 {{!-- Previous/next page links - displayed on every page --}}

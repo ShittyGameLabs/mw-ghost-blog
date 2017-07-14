@@ -5,17 +5,18 @@ $bg-grey-lighter: #F2F2F2;
 $bg-grey-light: #bbb;
 $bg-grey-regular:#666;
 $bg-grey-dark:#4F4F4F;
+$bg-grey-darker:#333333;
 
 
 $opacity-active:1;
 $opacity-inactive:0.68;
 
-$cyan:#27CBCC;
-$blue:#2196F3;
-$yellow: #FDD835;
-
 //material bitches
 
+$cyan:#27CBCC;
+$blue:#2196F3;
+$blue2:#348DD9;
+$yellow: #FDD835;
 $green:#7EB03C;
 $lightgrey:#E8E8E8;
 $grey:#61686D;
@@ -26,9 +27,9 @@ $vdarkgrey:#252C2F;
 
 
 //FONTS
-$main-font:'Open Sans', sans-serif;
-$body-font:'Open Sans';
-$accent-font:'VT323', monospace;
+$main-font: 'Helvetica Neue', Arial, sans-serif;
+$body-font: 'Helvetica Neue', Arial;
+// $accent-font:'VT323', monospace;
 
 
 //MIXINS
