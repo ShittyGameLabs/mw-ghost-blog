@@ -28,12 +28,16 @@
 @import '_partials/normalize';
 
 body {
-    font-family: $body-font;
+    font-family: $header-font;
     position: relative;
     color: $bg-grey-dark;
 }
 
-h1, h2 {
+p {
+    font-family: $main-font;
+}
+
+h1, h2, h3 {
     margin: 0;
 }
 
@@ -135,21 +139,24 @@ a {
             position: absolute;
             right: 15px;
             bottom: 0;
+            p {
+                font-size: 0.8rem;
+                font-family: $header-font;
+            }
         }
         .post-excerpt {
             height: 150px;
             padding: 20px;
             .post-title {
                 line-height: 1;
-                font-weight: normal;
+                font-weight: 600;
                 font-size: 1.1rem;
                 margin: 0;
             }
             .post-excerpt-content {
                 p {
-                    font-size: 1rem;
-                    line-height: 1.2;
-                    font-weight: 300;
+                    font-size: 0.9rem;
+                    line-height: 1.5;
                 }
             }
         }
