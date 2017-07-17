@@ -75,7 +75,17 @@ a {
 }
 
 .back-home {
-    margin-bottom: 30px;
+    padding: 50px;
+    a {
+        border: 1px solid rgba(255,255,255,0.5);
+        padding: 10px 20px;
+        color: rgba(255,255,255,0.95);
+        border-radius: 2px;
+        background: rgba(0,0,0,0.25);        
+        &:hover {
+            background: rgba(255,255,255,0.15);
+        }
+    }
 }
 
 //===Posts Page===//
@@ -88,6 +98,12 @@ a {
                 line-height: 1.5;
             }
         }
+        header.hero {
+            background-position: center;
+            background-size: cover;
+            height: 350px;
+            margin: -20px -50px 20px;
+        }
     }
 }
 
@@ -96,14 +112,11 @@ a {
 .home-template {
     .post-block{
         flex: 0 1 auto;
-        width: 31%;
-        margin-right:30px;
+        width: 250px;
+        margin-right: 4%;
         color: $bg-grey-regular;
         &:hover {
             color: $bg-grey-regular;
-        }
-        &:nth-of-type(3) {
-            margin-right:0px;
         }
     }
     .post {
@@ -121,7 +134,10 @@ a {
         }
         .post-header {
             height: 50%;
-            background: $blue;
+            background-color: $blue;
+            background-repeat: none;
+            background-size: cover;
+            background-position: center;
         }
         .post-title { 
             a {
