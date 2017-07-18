@@ -1,0 +1,16 @@
+.post-template {
+  .content {
+    padding: 0px 50px;
+    .post-content {
+      p {
+        line-height: 1.5;
+      }
+    }
+    header.hero {
+      background-position: center;
+      background-size: cover;
+      height: 350px;
+      margin: -20px -50px 20px;
+    }
+  }
+}
