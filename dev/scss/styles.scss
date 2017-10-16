@@ -67,37 +67,22 @@ a {
   top: 20px;
   min-height: 100vh;
 }
-
+.content-inner, .hero {
+  padding: 1% 5%;  
+}
+.hero {
+  
+}
 .content-inner {
   display: flex;
   flex-wrap: wrap;
-<<<<<<< HEAD
-  padding: 20px 60px;
-  @media (max-width: $tablet_device_width) {
-=======
   justify-content: flex-start;
-  padding: 1% 5%;
   @media (max-width: $mobile_device_width) {
->>>>>>> 7ad0360305aa654ca905fbe262812d4c050d8da0
     justify-content: center;
   }
 }
 
 .back-home {
-<<<<<<< HEAD
-  margin-bottom: 30px;
-}
-
-//===Posts Page===//
-
-.post-template {
-  .content {
-    padding: 0px 50px;
-    .post-content {
-      p {
-        line-height: 1.5;
-      }
-=======
   padding: 50px;
   a {
     border: 1px solid rgba(255, 255, 255, 0.5);
@@ -107,89 +92,10 @@ a {
     background: rgba(0, 0, 0, 0.25);
     &:hover {
       background: rgba(255, 255, 255, 0.15);
->>>>>>> 7ad0360305aa654ca905fbe262812d4c050d8da0
     }
   }
 }
 
 //===Posts Page===//
 @import "_partials/posts";
-//===Home Page===//
-
-<<<<<<< HEAD
-.home-template {
-  .post-block {
-    flex: 0 1 auto;
-    width: 320px;
-    margin-right: 20px;
-    color: $bg-grey-regular;
-    &:hover {
-      color: $bg-grey-regular;
-    }
-    &:nth-of-type(3) {
-      margin-right: 0px;
-    }
-    @media (max-width: $mobile_device_width) {
-    }
-  }
-  .post {
-    background: rgba(255, 255, 255, 0.95);
-    margin-bottom: 40px;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, .1);
-    line-height: 1.5;
-    transition: 0.25s all ease;
-    height: 300px;
-    overflow: auto;
-    position: relative;
-    &:hover {
-      box-shadow: 0 1px 8px rgba(0, 0, 0, .2);
-      transform: scale(1.01);
-    }
-    .post-header {
-      height: 50%;
-      background: $blue;
-    }
-    .post-title {
-      a {
-        color: rgba(black, $opacity-inactive);
-        font-size: 1.5rem;
-        text-decoration: none;
-        text-transform: uppercase;
-        &:hover {
-          color: rgba(black, $opacity-active);
-        }
-      }
-    }
-    .read-more {
-      text-align: right;
-    }
-    .read-more {
-      position: absolute;
-      right: 15px;
-      bottom: 0;
-      p {
-        font-size: 0.8rem;
-        font-family: $header-font;
-      }
-    }
-    .post-excerpt {
-      height: 150px;
-      padding: 20px;
-      .post-title {
-        line-height: 1;
-        font-weight: 600;
-        font-size: 1.1rem;
-        margin: 0;
-      }
-      .post-excerpt-content {
-        p {
-          font-size: 0.9rem;
-          line-height: 1.5;
-        }
-      }
-    }
-  }
-}
-=======
-@import "_partials/home";
->>>>>>> 7ad0360305aa654ca905fbe262812d4c050d8da0
+@import "_partials/home"
