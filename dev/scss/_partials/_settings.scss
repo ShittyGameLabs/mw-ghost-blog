@@ -21,15 +21,16 @@ $grey: #61686d;
 $darkgrey: #3a4349;
 $vdarkgrey: #252c2f;
 
+//Media
+$small_device_width: 480px;
 $mobile_device_width: 768px;
 $tablet_device_width: 991px;
+
 
 //FONTS
 $header-font: 'Open Sans', sans-serif;
 $main-font: 'Merriweather', sans-serif;
 // $accent-font:'VT323', monospace;
-
-//MIXINS
 
 //OTHER
 $transition: 0.25s ease all;
